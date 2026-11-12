@@ -104,11 +104,13 @@
             </div>
 
             <div class="hero-image">
-                <button class="image-glow" type="button" aria-label="Putar lingkaran dekoratif" title="Drag atau geser untuk memutar lingkaran"></button>
-                <button class="profile-card" type="button" aria-label="Balik foto profil Reyhan" aria-pressed="false">
-                    <img class="profile-face profile-front" src="image/profildepan.png" alt="Foto Reyhan dari depan">
-                    <img class="profile-face profile-back" src="image/profilebelakang.png" alt="Foto Reyhan dari belakang">
-                </button>
+                <div class="profile-visual">
+                    <button class="image-glow" type="button" aria-label="Putar lingkaran dekoratif" title="Drag atau geser untuk memutar lingkaran"></button>
+                    <button class="profile-card" type="button" aria-label="Balik foto profil Reyhan" aria-pressed="false">
+                        <img class="profile-face profile-front" src="image/profildepan.png" alt="Foto Reyhan dari depan">
+                        <img class="profile-face profile-back" src="image/profilebelakang.png" alt="Foto Reyhan dari belakang">
+                    </button>
+                </div>
                 <div class="image-caption">
                     <span>click foto untuk melihat belakang</span>
                     <span>2026</span>
@@ -506,7 +508,7 @@
 
         const movePortfolioTrack = (offset) => {
             const maxOffset = Math.max(
-                0,
+                portfolioMarquee.clientWidth * .06,
                 (portfolioTrack.scrollWidth - portfolioMarquee.clientWidth) / 2
             );
             portfolioOffset = Math.max(-maxOffset, Math.min(maxOffset, offset));
