@@ -1,59 +1,580 @@
-html {
-    font-family: "Courier New", Courier, monospace;
-}
-body{
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;500;700&display=swap');
+
+/* =========================
+   RESET & GENERAL
+========================= */
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #202022;
-}
-.navbar {
-    height: 20px;
-    align-items: center;
-    display: flex;
-    margin: 10px;
-    justify-content: space-between;
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 600px;
-    gap: 15px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.navbar a {
-    color: #3d7edf;
-    text-decoration: Poppins;
-    font-size: 20px;
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #1265c9;
+    --cyan: #00d9e9;
+    --text-blue: #416fae;
 }
 
-.herosection {
-    height: 100px;
-    align-items: center;
-    display: flex;
-    margin: 100px;
-    padding: 120px;
-    margin-top: -50px;
-    margin-left: -100px;
-    margin-right: auto;
-    max-width: 600px;
-    font-size: 60px;
-    position: absolute;
-    z-index: 2;
-    color: #fffefe;
-    top: 40%;
-    left: 15%;
-}
-
-.hero {
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
     position: relative;
+}
+
+/* Dekorasi cahaya di sudut halaman */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(12px);
+}
+
+body::before {
+    width: 220px;
+    height: 220px;
+    top: -80px;
+    left: -120px;
+    background: var(--cyan);
+    border-radius: 50%;
+    opacity: 0.65;
+    box-shadow:
+        0 0 80px 30px rgba(0, 217, 233, 0.45);
+}
+
+body::after {
+    width: 180px;
+    height: 250px;
+    bottom: -100px;
+    right: -100px;
+    background: #0648c9;
+    border-radius: 50%;
+    opacity: 0.7;
+    box-shadow:
+        0 0 90px 35px rgba(0, 70, 255, 0.45);
+}
+
+span {
+    color: var(--text-blue);
+}
+
+/* Dekorasi tambahan */
+
+.home::before,
+.about::before,
+.gallery::before,
+.project-detail::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 30px;
+    background: var(--blue);
+    filter: blur(10px);
+    opacity: 0.8;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.home::before {
+    top: -60px;
+    right: -40px;
+}
+
+.about::before {
+    bottom: 40px;
+    left: -70px;
+    background: var(--cyan);
+}
+
+.gallery::before {
+    top: 30px;
+    right: -70px;
+}
+
+.project-detail::before {
+    bottom: 30px;
+    left: -60px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
     width: 100%;
-    height: 100vh; /* Sesuaikan tinggi hero section (100vh = setinggi layar) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+}
+
+.logo {
+    display: none;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 18px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a:focus {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 7%;
+    overflow: hidden;
+    background: transparent;
+    z-index: 1;
+}
+
+.home-content {
+    width: 100%;
+}
+
+.small-title {
+    display: none;
+}
+
+.home h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(65px, 12vw, 145px);
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 1.1;
+    color: white;
+}
+
+.home h1 span {
+    color: white;
+}
+
+.home-description {
+    display: none;
+}
+
+.btn {
+    display: none;
+}
+
+.home-footer {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.home-footer p:last-child {
+    display: none;
+}
+
+/* =========================
+   SECTION GENERAL
+========================= */
+
+.section {
+    min-height: 100vh;
+    padding: 100px 7%;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    z-index: 1;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading p {
+    color: var(--text-blue);
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    letter-spacing: 0;
+}
+
+.section-heading h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.section-heading h2 span {
+    color: var(--text-blue);
+}
+
+/* =========================
+   ABOUT ME
+========================= */
+
+.about {
+    background: transparent;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Foto profil */
+
+.about-image {
+    width: 100%;
+    height: 490px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 7px solid #153c77;
+    box-shadow:
+        0 0 15px #1265c9,
+        0 0 35px rgba(18, 101, 201, 0.6);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Informasi profil */
+
+.about-content h3 {
+    color: var(--text-blue);
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.about-content h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.about-content h4 {
+    display: inline-block;
+    color: white;
+    background: #214d85;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.about-content > p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dddddd;
+    margin-bottom: 12px;
+}
+
+/* Kontak */
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+}
+
+.contact-info p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 13px;
+    line-height: 1.5;
+}
+
+/* Software */
+
+.software {
+    margin-top: 25px;
+}
+
+.software h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 5px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #174b91;
+    font-size: 13px;
+}
+
+.skill span:last-child {
+    color: white;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: transparent;
+}
+
+.gallery-container {
+    width: min(100%, 700px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    height: 290px;
+    background: #111111;
+    border: none;
+    border-radius: 0;
+    transition: 0.3s;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.65);
+}
+
+.gallery-info {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    right: 12px;
+    text-align: center;
+    padding: 0;
+    text-shadow: 0 2px 5px black;
+}
+
+.gallery-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    color: white;
+}
+
+.gallery-info p {
+    display: none;
+}
+
+/* =========================
+   PROJECT DETAIL
+========================= */
+
+.project-detail {
+    background: transparent;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.detail-image {
+    width: 100%;
+    min-height: 300px;
+    background: transparent;
+    border-radius: 0;
     overflow: hidden;
 }
 
-.hero img {
+.detail-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mencegah gambar gepeng/distorsi */
+    max-height: 600px;
+    object-fit: contain;
     display: block;
+}
+
+.detail-text h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    color: var(--text-blue);
+    margin-bottom: 10px;
+}
+
+.detail-text p {
+    font-size: 14px;
+    color: #dddddd;
+    line-height: 1.8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 35px 10%;
+}
+
+footer h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #cccccc;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+footer .copyright {
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .about-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-image {
+        grid-column: 1 / -1;
+        width: 280px;
+        height: 350px;
+        margin: 0 auto;
+    }
+
+    .gallery-card {
+        height: 240px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 18px 10px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .home h1 {
+        font-size: 60px;
+        letter-spacing: -2px;
+    }
+
+    .home-footer {
+        font-size: 12px;
+    }
+
+    .section {
+        padding: 90px 7%;
+    }
+
+    .section-heading p {
+        font-size: 23px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        grid-column: auto;
+        width: 240px;
+        height: 300px;
+    }
+
+    .about-content h1 {
+        font-size: 25px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery-card {
+        height: 190px;
+    }
+
+    .gallery-info h3 {
+        font-size: 16px;
+    }
+
+    .detail-image {
+        min-height: 200px;
+    }
 }

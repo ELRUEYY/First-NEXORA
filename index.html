@@ -1,27 +1,190 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio</title>
+    <title>Portfolio | Reyhan Syarif Pratama</title>
+
+    <!-- Menghubungkan file CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <div class="navbar">
-        <div><a href="#">Home</a></div>
-        <div><a href="#">About Me</a></div>
-        <div><a href="#">Image</a></div>
-    </div>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#home" class="logo">REYHAN<span>.</span></a>
 
-    <section class="hero">
-        <img src="image/image.png" alt="">
-        <div class="herosection">
-            <h1>Reyhan Syarif P</h1>
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#gallery">GALLERY</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <p class="small-title">WELCOME TO MY PERSONAL WEBSITE</p>
+
+            <h1>PORTO<span>FOLIO</span></h1>
+
+            <p class="home-description">
+                A collection of my creative works, ideas, and visual explorations.
+            </p>
+
+            <a href="#about" class="btn">EXPLORE MORE</a>
+        </div>
+
+        <div class="home-footer">
+            <p>Designed by: Reyhan Syarif P.</p>
+            <p>Graphic Designer & Creative Enthusiast</p>
         </div>
     </section>
-</nav>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about section">
+        <div class="section-heading">
+            <p>GET TO KNOW ME</p>
+            <h2>ABOUT <span>ME</span></h2>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="image/profile.png" alt="Foto Reyhan">
+            </div>
+
+            <div class="about-content">
+                <h3>Hello, I'm</h3>
+                <h1>Reyhan Syarif Pratama</h1>
+                <h4>Graphic Designer</h4>
+
+                <p>
+                    I am a graphic designer from a vocational school majoring
+                    in DKV. I have been involved in the design field since
+                    school, starting as someone who enjoys drawing and
+                    developing my skills into graphic design.
+                </p>
+
+                <p>
+                    I enjoy exploring visual ideas, creating designs, and
+                    learning new things to improve my creative abilities.
+                </p>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> your-email@example.com</p>
+                    <p><strong>Location:</strong> Indonesia</p>
+                </div>
+
+                <div class="software">
+                    <h3>Software Skills</h3>
+
+                    <div class="skill">
+                         <img src="image/photoshop.png" alt="Skill Level">
+                        <span>Adobe Photoshop</span>
+                        <span>Pre-Professional</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="image/photoshop.png" alt="Skill Level">
+                        <span>Adobe Illustrator</span>
+                        <span>Pre-Professional</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="image/photoshop.png" alt="Skill Level">
+                        <span>CorelDRAW</span>
+                        <span>Intermediate</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="image/photoshop.png" alt="Skill Level">
+                        <span>Adobe Premiere Pro</span>
+                        <span>Pre-Intermediate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery section">
+        <div class="section-heading">
+            <p>MY CREATIVE WORKS</p>
+            <h2>PROJECT <span>HIGHLIGHT</span></h2>
+        </div>
+
+        <div class="gallery-container">
+
+            <div class="gallery-card">
+                <img src="image/tshirt.jpg" alt="T-Shirt Design">
+                <div class="gallery-info">
+                    <h3>T-Shirt Design</h3>
+                    <p>Creative Apparel Design</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="image/menu.jpg" alt="Menu Book Design">
+                <div class="gallery-info">
+                    <h3>Menu Book Design</h3>
+                    <p>Food and Beverage Design</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="image/feed.jpg" alt="Feed Design">
+                <div class="gallery-info">
+                    <h3>Feed Design</h3>
+                    <p>Social Media Design</p>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="image/poster.jpg" alt="Poster Design">
+                <div class="gallery-info">
+                    <h3>Poster Design</h3>
+                    <p>Visual Communication Design</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECT DETAIL -->
+    <section class="project-detail section">
+        <div class="section-heading">
+            <p>SELECTED PROJECT</p>
+            <h2>T-SHIRT <span>DESIGN</span></h2>
+        </div>
+
+        <div class="detail-container">
+            <div class="detail-image">
+                <img src="image/tshirt-detail.jpg" alt="Detail T-Shirt Design">
+            </div>
+
+            <div class="detail-text">
+                <h3>Creative T-Shirt Design</h3>
+                <p>
+                    This project is one of my creative explorations in
+                    developing visual concepts into apparel design.
+                    The design combines typography, illustration,
+                    and composition to create a unique visual identity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>REYHAN<span>.</span></h2>
+        <p>Thank you for visiting my portfolio.</p>
+        <p class="copyright">
+            © 2026 Reyhan Syarif Pratama. All Rights Reserved.
+        </p>
+    </footer>
 
 </body>
 </html>
