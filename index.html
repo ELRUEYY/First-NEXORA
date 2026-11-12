@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-wave" aria-hidden="true"></div>
+    <div class="background-star" aria-hidden="true">
+        <span></span>
+        <span></span>
+    </div>
 
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -23,86 +27,91 @@
             <a href="#contact">Contact</a>
         </div>
 
-        <a href="https://wa.me/6283141953233" class="nav-button" target="_blank" rel="noopener noreferrer">Let's Talk ↗</a>
+        <a href="https://discord.com/users/880984211492843581" class="nav-button" target="_blank" rel="noopener noreferrer">Let's Talk ↗</a>
     </nav>
 
     <!-- HERO -->
     <section class="hero" id="home">
-
-        <div class="hero-content">
-            <h1 class="hero-title">Hello<span>.</span></h1>
-
-            <p class="hero-intro">
-                <span class="hero-intro-line" aria-hidden="true"></span>
-                <span>I'm <strong>Reyhan Syarif Pratama</strong></span>
-            </p>
-
-            <p class="hero-role hero-role--design"><strong>Graphic</strong> Designer</p>
-            <p class="hero-role hero-role--development">
-                <span class="loading-indicator" aria-hidden="true"></span>
-                <span><strong>Web</strong> Developer</span>
-            </p>
-            
-            <p class="description">
-                Welcome to my personal portfolio website! Here, 
-                you can explore my work, learn more about me,
-                and get in touch for potential collaborations or inquiries.
-
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#about" class="primary-btn">Explore More ↗</a>
-                <a href="#contact" class="secondary-btn">Contact Me</a>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <div class="image-glow"></div>
-            <button class="profile-card" type="button" aria-label="Balik foto profil Reyhan" aria-pressed="false">
-                <img class="profile-face profile-front" src="image/profildepan.png" alt="Foto Reyhan dari depan">
-                <img class="profile-face profile-back" src="image/profilebelakang.png" alt="Foto Reyhan dari belakang">
+        <p class="hero-this"><span class="hero-this-t">T</span>his</p>
+        <div class="hero-my-hanger">
+            <svg class="hero-my-ropes" aria-hidden="true">
+                <path class="hero-my-rope hero-my-rope--left"></path>
+                <path class="hero-my-rope hero-my-rope--right"></path>
+            </svg>
+            <button class="hero-my" type="button" aria-label="Goyangkan tulisan My" title="Drag atau gunakan tombol panah untuk menggoyangkan">
+                My
             </button>
-            <div class="image-caption">
-                <span>click foto untuk melihat belakang</span>
-                <span>2026</span>
-            </div>
         </div>
 
+        <div class="portfolio-marquee" tabindex="0" role="group"
+             aria-label="Portfolio title. Drag left or right, or use the arrow keys to move it.">
+            <div class="portfolio-marquee-track">
+                <span class="portfolio-marquee-title">PORTFOLIO</span>
+                <button class="portfolio-marquee-line" type="button" aria-label="Tarik garis seperti karet" aria-valuemin="35" aria-valuemax="240" aria-valuenow="100">
+                    <span class="portfolio-marquee-cursor"></span>
+                </button>
+            </div>
+        </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT (Hello + profil + tentang saya) -->
     <section class="section" id="about">
 
         <div class="section-label">01 — ABOUT ME</div>
 
-        <div class="glass about-card">
-            <h2>Get to know <span>me.</span></h2>
+        <div class="glass about-card about-merged">
+            <div class="hero-content">
+                <h1 class="hero-title">Hello<span>.</span></h1>
 
-            <p>
-                Halo! Perkenalkan, nama saya Reyhan Syarif Pratama.
-                Saya merupakan mahasiswa yang memiliki ketertarikan
-                pada bidang teknologi informasi, desain grafis,
-                dan dunia kreatif.
+                <p class="hero-intro">
+                    <span class="hero-intro-line" aria-hidden="true"></span>
+                    <span>I'm <strong>Reyhan Syarif Pratama</strong></span>
+                </p>
 
-                Saya senang mengeksplorasi ide-ide baru, mencoba
-                berbagai hal, dan mempelajari keterampilan yang
-                dapat membantu saya berkembang.
-            </p>
+                <p class="hero-role hero-role--design"><strong>Graphic</strong> Designer</p>
+                <p class="hero-role hero-role--development">
+                    <span class="loading-indicator" aria-hidden="true"></span>
+                    <span><strong>Web</strong> Developer</span>
+                </p>
 
-            <div class="about-info">
-                <div>
-                    <span>NAME</span>
-                    <h4>Reyhan Syarif P.</h4>
+                <p class="about-text">
+                    Halo! Perkenalkan, nama saya Reyhan Syarif Pratama.
+                    Saya merupakan mahasiswa yang memiliki ketertarikan
+                    pada bidang teknologi informasi, desain grafis,
+                    dan dunia kreatif.
+
+                    Saya senang mengeksplorasi ide-ide baru, mencoba
+                    berbagai hal, dan mempelajari keterampilan yang
+                    dapat membantu saya berkembang.
+                </p>
+
+                <div class="about-info">
+                    <div>
+                        <span>NAME</span>
+                        <h4>Reyhan Syarif P.</h4>
+                    </div>
+
+                    <div>
+                        <span>STATUS</span>
+                        <h4>Student</h4>
+                    </div>
+
+                    <div>
+                        <span>INTEREST</span>
+                        <h4>Design & Technology</h4>
+                    </div>
                 </div>
+            </div>
 
-                <div>
-                    <span>STATUS</span>
-                    <h4>Student</h4>
-                </div>
-
-                <div>
-                    <span>INTEREST</span>
-                    <h4>Design & Technology</h4>
+            <div class="hero-image">
+                <button class="image-glow" type="button" aria-label="Putar lingkaran dekoratif" title="Drag atau geser untuk memutar lingkaran"></button>
+                <button class="profile-card" type="button" aria-label="Balik foto profil Reyhan" aria-pressed="false">
+                    <img class="profile-face profile-front" src="image/profildepan.png" alt="Foto Reyhan dari depan">
+                    <img class="profile-face profile-back" src="image/profilebelakang.png" alt="Foto Reyhan dari belakang">
+                </button>
+                <div class="image-caption">
+                    <span>click foto untuk melihat belakang</span>
+                    <span>2026</span>
                 </div>
             </div>
         </div>
@@ -172,8 +181,8 @@
                 <a href="https://instagram.com/rey_hanz0.0"
                    target="_blank" rel="noopener noreferrer">Instagram ↗</a>
 
-                <a href="https://wa.me/6283141953233"
-                   target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+                <a href="https://discord.com/users/880984211492843581"
+                   target="_blank" rel="noopener noreferrer">Discord DM ↗</a>
 
                 <a href="https://github.com/ELRUEYY"
                    target="_blank" rel="noopener noreferrer">GitHub ↗</a>
@@ -191,10 +200,345 @@
 
     <script>
         const profileCard = document.querySelector(".profile-card");
+        const profileRing = document.querySelector(".image-glow");
 
         profileCard.addEventListener("click", () => {
             const isFlipped = profileCard.classList.toggle("is-flipped");
             profileCard.setAttribute("aria-pressed", String(isFlipped));
+        });
+
+        let ringStartPointerAngle = 0;
+        let ringStartRotation = 0;
+
+        const pointerAngle = (event) => {
+            const bounds = profileRing.getBoundingClientRect();
+            return Math.atan2(
+                event.clientY - (bounds.top + bounds.height / 2),
+                event.clientX - (bounds.left + bounds.width / 2)
+            ) * 180 / Math.PI;
+        };
+
+        profileRing.addEventListener("pointerdown", (event) => {
+            event.preventDefault();
+            const transform = new DOMMatrix(getComputedStyle(profileRing).transform);
+            ringStartRotation = Math.atan2(transform.b, transform.a) * 180 / Math.PI;
+            ringStartPointerAngle = pointerAngle(event);
+            profileRing.classList.add("is-dragging");
+            profileRing.setPointerCapture(event.pointerId);
+        });
+
+        profileRing.addEventListener("pointermove", (event) => {
+            if (!profileRing.hasPointerCapture(event.pointerId)) return;
+            const rotation = ringStartRotation + pointerAngle(event) - ringStartPointerAngle;
+            profileRing.style.setProperty("--ring-angle", `${rotation}deg`);
+        });
+
+        const releaseRing = (event) => {
+            if (profileRing.hasPointerCapture(event.pointerId)) {
+                profileRing.releasePointerCapture(event.pointerId);
+                profileRing.classList.remove("is-dragging");
+            }
+        };
+
+        profileRing.addEventListener("pointerup", releaseRing);
+        profileRing.addEventListener("pointercancel", releaseRing);
+        profileRing.addEventListener("keydown", (event) => {
+            if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+            event.preventDefault();
+            const transform = new DOMMatrix(getComputedStyle(profileRing).transform);
+            const currentRotation = Math.atan2(transform.b, transform.a) * 180 / Math.PI;
+            const direction = event.key === "ArrowRight" ? 15 : -15;
+            profileRing.style.setProperty("--ring-angle", `${currentRotation + direction}deg`);
+            profileRing.classList.add("is-dragging");
+        });
+        profileRing.addEventListener("blur", () => profileRing.classList.remove("is-dragging"));
+
+        const hangingMy = document.querySelector(".hero-my");
+        let myAngle = 0;
+        let myVelocity = 0;
+        let myX = 0;
+        let myY = 0;
+        let myVelocityX = 0;
+        let myVelocityY = 0;
+        let myPointerOffsetX = 0;
+        let myPointerOffsetY = 0;
+        let myLastPointerX = 0;
+        let myLastPointerY = 0;
+        let myLastFrame = 0;
+        let myAnimationFrame = 0;
+        const myHanger = document.querySelector(".hero-my-hanger");
+        const myRopes = document.querySelector(".hero-my-ropes");
+        const myRopeLeft = document.querySelector(".hero-my-rope--left");
+        const myRopeRight = document.querySelector(".hero-my-rope--right");
+
+        const updateMyRopes = () => {
+            const hangerWidth = myHanger.clientWidth;
+            const hangerHeight = myHanger.clientHeight;
+            const hangerBounds = myHanger.getBoundingClientRect();
+            const buttonBounds = hangingMy.getBoundingClientRect();
+            const topLeft = {
+                x: buttonBounds.left - hangerBounds.left,
+                y: buttonBounds.top - hangerBounds.top
+            };
+            const drawRope = (path, anchorX, end) => {
+                const anchorY = 0;
+                const deltaY = end.y - anchorY;
+                const flex = Math.min(24, 12 + Math.abs(myAngle) * .14);
+                const control1X = anchorX + (end.x - anchorX) * .32;
+                const control2X = anchorX + (end.x - anchorX) * .72;
+                const control1Y = anchorY + deltaY * .38 + flex;
+                const control2Y = anchorY + deltaY * .78 + flex * .6;
+                path.setAttribute(
+                    "d",
+                    `M ${anchorX} ${anchorY} C ${control1X} ${control1Y}, ${control2X} ${control2Y}, ${end.x} ${end.y}`
+                );
+            };
+
+            myRopes.setAttribute("viewBox", `0 0 ${hangerWidth} ${hangerHeight}`);
+            drawRope(myRopeLeft, hangerWidth * .22, topLeft);
+            drawRope(myRopeRight, hangerWidth * .78, {
+                x: topLeft.x + buttonBounds.width,
+                y: topLeft.y
+            });
+        };
+
+        const setMyAngle = (angle) => {
+            myAngle = Math.max(-55, Math.min(55, angle));
+            hangingMy.style.setProperty("--my-angle", `${myAngle}deg`);
+            hangingMy.style.setProperty("--my-x", `${myX}px`);
+            hangingMy.style.setProperty("--my-y", `${myY}px`);
+            updateMyRopes();
+        };
+
+        setMyAngle(0);
+        window.addEventListener("resize", updateMyRopes);
+
+        const swingMy = (timestamp) => {
+            const elapsed = myLastFrame ? Math.min(timestamp - myLastFrame, 32) : 16;
+            myLastFrame = timestamp;
+            const steps = Math.max(1, Math.round(elapsed / 16));
+
+            for (let step = 0; step < steps; step += 1) {
+                myVelocity += -myAngle * 0.012;
+                myVelocity *= 0.94;
+                myAngle += myVelocity;
+                myVelocityX += -myX * 0.008;
+                myVelocityX *= 0.9;
+                myX += myVelocityX;
+                myVelocityY += -myY * 0.008;
+                myVelocityY *= 0.9;
+                myY += myVelocityY;
+            }
+
+            setMyAngle(myAngle);
+            if (
+                Math.abs(myAngle) < 0.08 &&
+                Math.abs(myVelocity) < 0.08 &&
+                Math.abs(myX) < 0.5 &&
+                Math.abs(myVelocityX) < 0.5 &&
+                Math.abs(myY) < 0.5 &&
+                Math.abs(myVelocityY) < 0.5
+            ) {
+                setMyAngle(0);
+                myX = 0;
+                myY = 0;
+                myVelocity = 0;
+                myVelocityX = 0;
+                myVelocityY = 0;
+                myLastFrame = 0;
+                myAnimationFrame = 0;
+                return;
+            }
+
+            myAnimationFrame = window.requestAnimationFrame(swingMy);
+        };
+
+        const startMySwing = () => {
+            if (myAnimationFrame) window.cancelAnimationFrame(myAnimationFrame);
+            myLastFrame = 0;
+            myAnimationFrame = window.requestAnimationFrame(swingMy);
+        };
+
+        hangingMy.addEventListener("pointerdown", (event) => {
+            if (event.button !== 0) return;
+            event.preventDefault();
+            if (myAnimationFrame) window.cancelAnimationFrame(myAnimationFrame);
+            myAnimationFrame = 0;
+            const buttonBounds = hangingMy.getBoundingClientRect();
+            myPointerOffsetX = event.clientX - (buttonBounds.left + buttonBounds.width / 2);
+            myPointerOffsetY = event.clientY - (buttonBounds.top + buttonBounds.height / 2);
+            myLastPointerX = event.clientX;
+            myLastPointerY = event.clientY;
+            hangingMy.classList.add("is-dragging");
+            hangingMy.setPointerCapture(event.pointerId);
+        });
+
+        hangingMy.addEventListener("pointermove", (event) => {
+            if (!hangingMy.hasPointerCapture(event.pointerId)) return;
+            const hangerBounds = myHanger.getBoundingClientRect();
+            const heroBounds = myHanger.closest(".hero").getBoundingClientRect();
+            const buttonBounds = hangingMy.getBoundingClientRect();
+            const centerX = event.clientX - myPointerOffsetX;
+            const centerY = event.clientY - myPointerOffsetY;
+            const targetX = centerX - hangerBounds.left - myHanger.clientWidth / 2;
+            const targetY = centerY - hangerBounds.top - 96 - buttonBounds.height / 2;
+            const minX = heroBounds.left - hangerBounds.left + buttonBounds.width / 2 - myHanger.clientWidth / 2;
+            const maxX = heroBounds.right - hangerBounds.left - buttonBounds.width / 2 - myHanger.clientWidth / 2;
+            const minY = -96;
+            const maxY = heroBounds.bottom - hangerBounds.top - buttonBounds.height / 2 - 96;
+
+            myX = Math.max(minX, Math.min(maxX, targetX));
+            myY = Math.max(minY, Math.min(maxY, targetY));
+            myVelocityX = (event.clientX - myLastPointerX) * 0.18;
+            myVelocityY = (event.clientY - myLastPointerY) * 0.18;
+            myLastPointerX = event.clientX;
+            myLastPointerY = event.clientY;
+            setMyAngle(myX * -0.06);
+        });
+
+        const releaseMy = (event) => {
+            if (!hangingMy.hasPointerCapture(event.pointerId)) return;
+            hangingMy.releasePointerCapture(event.pointerId);
+            hangingMy.classList.remove("is-dragging");
+            myVelocity = 0;
+            startMySwing();
+        };
+
+        hangingMy.addEventListener("pointerup", releaseMy);
+        hangingMy.addEventListener("pointercancel", releaseMy);
+        hangingMy.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+                event.preventDefault();
+                myVelocity += event.key === "ArrowRight" ? -3 : 3;
+                startMySwing();
+            } else if (event.key === "Home") {
+                event.preventDefault();
+                myX = 0;
+                myY = 0;
+                setMyAngle(0);
+                myVelocity = 0;
+                myVelocityX = 0;
+                myVelocityY = 0;
+                if (myAnimationFrame) window.cancelAnimationFrame(myAnimationFrame);
+                myAnimationFrame = 0;
+            }
+        });
+
+        const portfolioMarquee = document.querySelector(".portfolio-marquee");
+        const portfolioTrack = document.querySelector(".portfolio-marquee-track");
+        const portfolioLine = document.querySelector(".portfolio-marquee-line");
+        let portfolioStartX = 0;
+        let portfolioStartOffset = 0;
+        let portfolioOffset = 0;
+        let lineStretch = 1;
+        let lineVelocity = 0;
+        let linePointerX = 0;
+        let lineAnimationFrame = 0;
+
+        const setLineStretch = (stretch) => {
+            lineStretch = Math.max(.35, Math.min(2.4, stretch));
+            portfolioLine.style.setProperty("--line-stretch", String(lineStretch));
+            portfolioLine.setAttribute("aria-valuenow", String(Math.round(lineStretch * 100)));
+        };
+
+        const springLineBack = () => {
+            lineVelocity += (1 - lineStretch) * .08;
+            lineVelocity *= .82;
+            setLineStretch(lineStretch + lineVelocity);
+
+            if (Math.abs(lineStretch - 1) < .002 && Math.abs(lineVelocity) < .002) {
+                setLineStretch(1);
+                lineVelocity = 0;
+                lineAnimationFrame = 0;
+                return;
+            }
+
+            lineAnimationFrame = window.requestAnimationFrame(springLineBack);
+        };
+
+        portfolioLine.addEventListener("pointerdown", (event) => {
+            if (event.button !== 0) return;
+            event.preventDefault();
+            event.stopPropagation();
+            if (lineAnimationFrame) window.cancelAnimationFrame(lineAnimationFrame);
+            lineAnimationFrame = 0;
+            lineVelocity = 0;
+            linePointerX = event.clientX;
+            portfolioLine.classList.add("is-elastic-dragging");
+            portfolioLine.setPointerCapture(event.pointerId);
+        });
+
+        portfolioLine.addEventListener("pointermove", (event) => {
+            if (!portfolioLine.hasPointerCapture(event.pointerId)) return;
+            event.stopPropagation();
+            const deltaX = event.clientX - linePointerX;
+            linePointerX = event.clientX;
+            setLineStretch(lineStretch + deltaX / Math.max(portfolioLine.offsetWidth, 1));
+            lineVelocity = deltaX / Math.max(portfolioLine.offsetWidth, 1) * .22;
+        });
+
+        const releasePortfolioLine = (event) => {
+            if (!portfolioLine.hasPointerCapture(event.pointerId)) return;
+            event.stopPropagation();
+            portfolioLine.releasePointerCapture(event.pointerId);
+            portfolioLine.classList.remove("is-elastic-dragging");
+            lineAnimationFrame = window.requestAnimationFrame(springLineBack);
+        };
+
+        portfolioLine.addEventListener("pointerup", releasePortfolioLine);
+        portfolioLine.addEventListener("pointercancel", releasePortfolioLine);
+        portfolioLine.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+                event.preventDefault();
+                event.stopPropagation();
+                setLineStretch(lineStretch + (event.key === "ArrowRight" ? .12 : -.12));
+                lineVelocity = (lineStretch - 1) * .06;
+                if (!lineAnimationFrame) {
+                    lineAnimationFrame = window.requestAnimationFrame(springLineBack);
+                }
+            } else if (event.key === "Home") {
+                event.preventDefault();
+                event.stopPropagation();
+                if (lineAnimationFrame) window.cancelAnimationFrame(lineAnimationFrame);
+                lineAnimationFrame = window.requestAnimationFrame(springLineBack);
+            }
+        });
+
+        const movePortfolioTrack = (offset) => {
+            const maxOffset = Math.max(
+                0,
+                (portfolioTrack.scrollWidth - portfolioMarquee.clientWidth) / 2
+            );
+            portfolioOffset = Math.max(-maxOffset, Math.min(maxOffset, offset));
+            portfolioTrack.style.setProperty("--portfolio-offset", `${portfolioOffset}px`);
+        };
+
+        portfolioMarquee.addEventListener("pointerdown", (event) => {
+            if (event.button !== 0) return;
+            event.preventDefault();
+            portfolioStartX = event.clientX;
+            portfolioStartOffset = portfolioOffset;
+            portfolioMarquee.classList.add("is-dragging");
+            portfolioMarquee.setPointerCapture(event.pointerId);
+        });
+
+        portfolioMarquee.addEventListener("pointermove", (event) => {
+            if (!portfolioMarquee.hasPointerCapture(event.pointerId)) return;
+            movePortfolioTrack(portfolioStartOffset + event.clientX - portfolioStartX);
+        });
+
+        const releasePortfolioMarquee = (event) => {
+            if (!portfolioMarquee.hasPointerCapture(event.pointerId)) return;
+            portfolioMarquee.releasePointerCapture(event.pointerId);
+            portfolioMarquee.classList.remove("is-dragging");
+        };
+
+        portfolioMarquee.addEventListener("pointerup", releasePortfolioMarquee);
+        portfolioMarquee.addEventListener("pointercancel", releasePortfolioMarquee);
+        portfolioMarquee.addEventListener("keydown", (event) => {
+            if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+            event.preventDefault();
+            movePortfolioTrack(portfolioOffset + (event.key === "ArrowRight" ? -48 : 48));
         });
 
         const navLinks = [...document.querySelectorAll(".nav-menu a")];
