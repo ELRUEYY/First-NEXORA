@@ -121,17 +121,39 @@ a:focus-visible, button:focus-visible, .portfolio-marquee:focus-visible { outlin
 }
 
 .hero-this { left: 33%; top: 19%; display: flex; align-items: flex-end; }
-.hero-this-t {
+.hero-this-letter {
+  position: relative;
   display: inline-block;
-  padding: .02em .12em;
+  isolation: isolate;
+}
+.hero-this-letter:first-child {
   margin-right: .04em;
   transform: rotate(-4deg);
+}
+.hero-this-letter::before, .hero-this-letter::after {
+  content: "";
+  position: absolute;
+  inset: -.025em .035em;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
   background:
-    linear-gradient(#fff, #fff) 0 0 / 6px 6px no-repeat,
-    linear-gradient(#fff, #fff) 100% 0 / 6px 6px no-repeat,
-    linear-gradient(#fff, #fff) 0 100% / 6px 6px no-repeat,
-    linear-gradient(#fff, #fff) 100% 100% / 6px 6px no-repeat,
+    linear-gradient(#fff, #fff) left top / .1em .1em no-repeat,
+    linear-gradient(#fff, #fff) right top / .1em .1em no-repeat,
+    linear-gradient(#fff, #fff) left bottom / .1em .1em no-repeat,
+    linear-gradient(#fff, #fff) right bottom / .1em .1em no-repeat,
     #85a8d8;
+}
+.hero-this-letter::before { transition: opacity .16s ease; }
+.hero-this-letter:hover::before { opacity: 1; }
+.hero-this-letter::after { animation: hero-this-box-blink .42s ease-in-out both; }
+.hero-this-letter:nth-child(2)::after { animation-delay: .31s; }
+.hero-this-letter:nth-child(3)::after { animation-delay: .62s; }
+.hero-this-letter:nth-child(4)::after { animation-delay: .93s; }
+
+@keyframes hero-this-box-blink {
+  0%, 100% { opacity: 0; }
+  28%, 68% { opacity: 1; }
 }
 
 .hero-my-hanger {
